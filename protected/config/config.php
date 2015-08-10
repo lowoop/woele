@@ -1,0 +1,22 @@
+<?php
+return array(
+		'role'=>array(
+				'admin'=>'admin',
+				'user'=>'user',
+				'shop'=>'shop',
+		),
+		'vip'=>array(
+			0=>'否',
+			1=>'是',
+		),
+        'rec'=>array(
+            0=>'否',
+            1=>'是',
+        ),
+        'label'=>array(
+            '1'=>'减',
+            '2'=>'卷',
+            '3'=>'预',
+            '4'=>'票',
+        ),
+);

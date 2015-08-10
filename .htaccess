@@ -1,0 +1,21 @@
+php_value	display_errors			On
+php_value	short_open_tag			Off
+php_value	magic_quotes_gpc		Off
+php_value	magic_quotes_runtime	Off
+php_value	magic_quotes_sybase		Off
+php_value	allow_call_time_pass_reference	Off
+php_value	register_long_arrays	Off
+php_value	register_globals		Off
+php_value	date.timezone			PRC
+
+RewriteEngine on
+
+
+# if a directory or a file exists, use it directly
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# otherwise forward it to index.php
+RewriteRule . index.php
+
+

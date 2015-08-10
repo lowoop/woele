@@ -1,0 +1,638 @@
+/*! HTML5 Boilerplate v5.0.0 | MIT License | http://h5bp.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {color: #4e4e4e;font-size: 1em;line-height: 1.4;font-family: 'Microsoft YaHei';word-break: break-all;}
+a{text-decoration: none;color:#4e4e4e;}
+a:hover{color: #f75e0e;}
+span,a{ transition: all 0.2s;}
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {background: #b3d4fc;text-shadow: none;}
+
+::selection { background: #b3d4fc;text-shadow: none;}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {display: block;height: 1px;border: 0;border-top: 1px solid #ccc;margin: 1em 0;padding: 0;}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,canvas,iframe,img,svg,video { vertical-align: middle;}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {border: 0;margin: 0;padding: 0;}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {resize: vertical;}
+input[type='text'],input[type='password'],input[type='search']{border-radius:3px;border: none;outline: none;font-size: 14px;color:#fff;outline:none}
+::-webkit-input-placeholder { /* WebKit browsers */
+    color: rgba(0,0,0,0.3);
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: rgba(0,0,0,0.3);
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color: rgba(0,0,0,0.3);
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: rgba(0,0,0,0.3);
+}
+
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {margin: 0.2em 0;background: #ccc;color: #000;padding: 0.2em 0;}
+.shaow{box-shadow:2px 3px 3px rgba(0,0,0,.1);}
+.fl{float: left;}
+.fr{float: right;}
+.valiclass{font-size: 14px;color: red}
+.hidden{display: none}
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
+header{height: 90px;background:#ffc713}
+.div{width:1022px;margin: 0 auto}
+.logo{width:335px;height: 90px;display: block;float:left;background: url(../img/logo.gif) no-repeat}
+.userbtn{width: 76px;height:36px;background:#fe8a0d;border-radius: 3px;border: none;color:#fff;outline: none;float:right;margin:28px 20px 0 0;}
+.userbtn:hover{background: #f15a25;}
+.loginuser{height: 42px;margin:24px 20px 0 0;position:relative;}
+.portrait{height: 42px;height: 42px;}
+.arrow{width:10px;height: 16px;display: inline-block;vertical-align: middle;background: url(../img/arrow.png)}
+.loginuser .pop{width:103px;background: #fff;position:absolute;top: 53px;left: 0;text-align: center;line-height: 30px;font-size: 14px;display: none;padding-bottom:10px;}
+.loginuser .up{position:absolute;display:block;width:103px;height:20px;top: -11px;left:0px;background: url(../img/up.png) no-repeat 17px 6px; }
+.mar10{margin-top: 10px;display: inline-block;}
+.loginuser:hover .arrow{background-position:0 -16px; }
+.loginhover .pop{display: block;}
+
+.banner {
+	position: relative;
+	width: 100%;
+	height: 350px;
+	overflow: auto;
+	font-size: 18px;
+	line-height: 24px;
+	text-align: center;
+
+	color: rgba(255,255,255,.6);
+	text-shadow: 0 0 1px rgba(0,0,0,.05), 0 1px 2px rgba(0,0,0,.3);
+
+	background: #5b4d3d;
+	box-shadow: 0 1px 2px rgba(0,0,0,.25);
+}
+	
+.banner ul.ful {
+	list-style: none;
+	width: 100%;
+}
+.banner ul.ful li {
+	position: absolute;
+	left: 0;
+	top: 0;
+	display:none;
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+	height: 350px;
+	background-repeat: no-repeat;
+	-o-background-size: 100% 100%;
+	-ms-background-size: 100% 100%;
+	-moz-background-size: 100% 100%;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+	background-position: top center;
+}
+
+.banner .mask{width: 100%;height:63px;position:absolute;bottom: 0;left: 0;background: rgba(0,0,0,0.1)}
+
+
+.banner .dots {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 12px;
+}
+.banner .dots li {
+	display: inline-block;
+	width:38px;
+	height:13px;
+	margin: 0 4px;
+	text-indent: -999em;
+	border-radius: 6px;
+	cursor: pointer;
+    border-radius:7px;
+    background: #fff;
+	-webkit-transition: background .5s, opacity .5s;
+	-moz-transition: background .5s, opacity .5s;
+	transition: background .5s, opacity .5s;
+}
+.banner .dots li.hover {
+	background: #fff;
+	opacity: 1;
+}
+
+.banner .arrows {
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+	color: #fff;
+}
+.banner .arrow {
+	display: inline;
+	padding-left: 10px;
+	cursor: pointer;
+}
+.banner .dots li.hover {
+	background: #fff;
+	opacity: 1;
+}
+.banner .dots li.active {width: 83px;background: #ffc713}
+
+
+input.addressipt::-webkit-input-placeholder, textarea::-webkit-input-placeholder { 
+    color:    #ffc78a;
+}
+input.addressipt:-moz-placeholder, textarea:-moz-placeholder { 
+    color:    #ffc78a;
+}
+input.addressipt::-moz-placeholder, textarea::-moz-placeholder { 
+    color:    #ffc78a;
+}
+input.addressipt:-ms-input-placeholder, textarea:-ms-input-placeholder { 
+    color:    #ffc78a;
+}
+
+.address{height: 336px;position: relative}
+.gonggao{position:absolute;width: 913px;height: 50px;left: 50px;line-height: 50px;background:url(../img/gonggao.png) 16px 15px no-repeat #ffc713;top: 95px;text-indent:40px;color:#5d5d5d}
+.address input{position:absolute;width: 664px;height: 76px;background: #fe8a0d;font-size: 22px;color: #fff;text-indent: 32px;left: 50px;top:170px;}
+.placeholeder{font-size: 22px; color: #ffc78a;width: 664px;height: 76px;left: 50px;top:130px;position:absolute;line-height: 76px;text-indent:32px;}
+.adderssslide{width: 664px;background: #f6f6f6;color: #666666;position: absolute;left: 50px;top:206px;border-bottom-left-radius: 3px;border-bottom-right-radius: 3px;padding: 15px 0;display: none}
+.adderssslide li{line-height:34px;text-indent: 30px;}
+.adderssslide li:hover{background: #e3e3e3}
+
+.searchbtn{width: 227px;height:76px;background:#f75e0d;border-radius: 3px;border: none;color:#fff;outline: none;font-size: 30px;top:170px;right:60px;position: absolute}
+.searchbtn:hover{background: #f7440d;}
+
+.stepwp{height: 511px;background:#ffc713}
+.step{height: 511px;background: url(../img/step.jpg);}
+.step h1{ font-weight: normal;padding-top:60px;text-align: center;color:#584711}
+.step span{display: inline-block;margin-top:290px;text-align: center}
+
+
+footer{color:#d0d0d0;text-align: center;height:338px;background: url(../img/qcode.gif) #3a3a3a center 97px no-repeat}
+.quetion{padding-top: 44px;display: inline-block;height:40px;font-size: 24px;}
+.connect{padding-top: 170px;}
+
+
+
+/*设置pop*/
+.setover{width:635px;height:452px;background:#fff;box-shadow: 0 3px 0 rgba(0,0,0,0.12);position:fixed;left: 50%;top:50%;z-index: 9999999;display: none;}
+.setclose{font-size: 22px;width: 22px;height: 22px;top:20px;right:20px;position:absolute;cursor:pointer;font-family: "SimSun", "宋体";}
+.setclose:hover{color:#f96400}
+.setinwp{width:535px;margin:40px auto;color: #504f4f;font-size: 16px;}
+.setinwp h3{font-weight:normal;padding-bottom:17px;}
+.setinwp input[type='text'],input[type='password']{background: #f0f0f0;width: 535px;height: 52px;margin-top: 8px; text-indent: 10px;color: #747474;font-size: 16px;}
+.setinwp .red{color:#ff3c3c;}
+.setinwp .passwordset{height:20px;padding-top:20px;}
+.setform{width:228px; height:58px; background:#ffc713;color:#fff;border: none;font-size:18px;margin:35px auto;display: inline-block;cursor:pointer;border-radius: 3px;}
+.setform:hover{background:#fe8a0d}
+.radselect{width: 6px;height: 6px;background: #fff;border:5px solid #c6c6c6;display: inline-block; border-radius: 50%;vertical-align: middle;-webkit-user-select: none;position: relative;top: -2px}
+.active{border-color:#f65959;}
+
+
+/*list content*/
+.listcontent{width: 980px;margin: 50px auto}
+.listcontent .left{width:260px;overflow-x: hidden;float: left;}
+.listcontent .left .searchbox{width: 100%;height: 44px;background: #ffc713;overflow: hidden;margin-bottom: 20px;}
+.listcontent .left .searchbox input{width:205px;height: 44px;border:none;background: none;text-indent: 15px;}
+.listcontent .left .searchbox span{width:44px;height: 44px;background: url(../img/s.gif);display: block;float: right;cursor: pointer;}
+.listcontent .left  .cptt{padding:10px 0 14px;}
+.listcontent .left .cp{width: 286px;padding-bottom:5px;}
+.listcontent .left .cp span{display:block;height: 36px;background: #efefef;color: #929292;margin: 0 10px 10px 0px;line-height: 36px;cursor: pointer;width: 80px;text-align: center;float: left;}
+.listcontent .left .cp span.cur{color: #fff;background: #f65959}
+.listcontent .left .cp span:hover{color: #fff;background: #f65959}
+.listcontent .left .clbtn{width:258px;height: 35px; border: 1px solid #f65959;color: #f65959;text-align: center;line-height: 35px;cursor: pointer;margin-top:20px;}
+.listcontent .left .clbtn:hover{background:#f65959;color: #fff;}
+
+.listcontent .right{float: right;width:670px;overflow-x:hidden }
+.listcontent .right .active{border:5px solid #f65959;}
+.listcontent .right .shopstop{margin-bottom: 24px;}
+.listcontent .right ul{width: 730px;}
+.listcontent .right ul li{width: 200px;height: 248px;float: left;margin-right: 36px;font-size: 14px;position: relative;}
+.listcontent .right ul li .vip{width:31px;height: 47px;background: url(../img/vip.png);position: absolute;top:-19px;right: 0;z-index: 100}
+.listcontent .right ul li.opacity{opacity: 0.6}
+.listcontent .right ul li a.img{width:200px;height: 140px;overflow: hidden;display: block;margin-bottom: 16px;}
+.listcontent .right ul li .img img{transition:all 1s;}
+.listcontent .right ul li .img:hover img{-webkit-transform:scale(1.06);transform:scale(1.06);}
+.listcontent .right ul li .fr{color: #b4b4b4}
+.listcontent .right ul li .juan{margin-top: 15px;}
+.listcontent .right ul li .juan i{font-style: normal;display: inline-block;width: 26px;height: 26px;border-radius: 50%;background: #a3a3a3;font-size: 15px;color: #fff;line-height: 26px;text-align: center;margin-right: 10px;padding: 0}
+.listcontent .right ul li .juan i.col01{background: #ff4f4f}
+.listcontent .right ul li .juan i.col02{background: #ff942c}
+.listcontent .right ul li .juan i.col03{background: #956db6}
+.listcontent .right ul li .juan i.col04{background: #6ab923}
+.stopdiv{padding-top: 34px;border-top:1px solid #f1f1f1;float: left;display: none;}
+/*通用*/
+.CONTENT{width: 980px;margin: 50px auto}
+.LEFT{width:650px;overflow-x: hidden;}
+.RIGHT{width:278px;overflow-x:hidden;min-height: 500px;}
+/*餐厅展示*/
+.restaurant{width:650px;height: 214px;}
+.restaurant .pic{width:214px;height: 214px;float: left;display: block;}
+.restaurant .pic img{width: 100%;height: 100%}
+.restaurant .detail{width: 402px;}
+.restaurant .detail h1{font-size: 24px;margin:0;}
+.restaurant .detail h1 .rclose{width:40px;height:25px;background:url(../img/restaurant.png);display: inline-block;vertical-align: middle;}
+.restaurant .detail h1 .ropen{width:40px;height:25px;background:url(../img/restaurant.png) -40px 0;display: inline-block;vertical-align: middle;}
+.restaurant .detail p{line-height:38px;margin: 18px 0 16px 0}
+.pay{width: 46px;height: 24px; display: inline-block;vertical-align: middle;background: url(../img/restaurant.png);}
+.kamc{background-position: 0 -92px;}
+.kavisa{background-position: -45px -92px;}
+.kacash{background-position: -91px -92px;}
+.restaurant .detail .other{width:32px;height: 32px;display: inline-block;vertical-align: middle;background: url(../img/restaurant.png) no-repeat;}
+.restaurant .detail .ot1{background-position:0 -42px;}
+.restaurant .detail .ot2{background-position:-32px -42px;}
+.restaurant .detail .ot3{background-position:-64px -42px;}
+.restaurant .detail .ww{display: inline-block;padding: 0 10px}
+
+.rtype{width:682px;height:140px;background: #f7f7f7;margin: 52px 0 34px;padding:15px 0  20px;position: relative;overflow: hidden;}
+.rtype span{display:inline-block;width:130px;text-indent:30px;line-height:40px;}
+.rtype span.cur{color: #fd890d}
+.rtype .rarrow{width:800px;height: 15px;position: absolute;left:0;bottom:3px;background:url(../img/restaurant.png) center -135px no-repeat #f7f7f7;transition:all 0.2s;border-bottom: 10px solid #f7f7f7}
+.rhover{overflow-y: auto;height: auto;}
+.rhover .rarrow{background-position: center -148px;}
+
+.clist{width: 650px;height:150px; margin-top:36px;}
+.clist .picimg{width:150px;height:150px;overflow:hidden;display:block;float:left;}
+.clist .describe{width:472px;float: right;}
+.clist .describe .nowaimai{display: inline-block;width: 124px;height: 37px;background: url(../img/nowaimai.gif);position: relative;top: 13px;left: 12px;}
+.clist h3{font-size: 16px;}
+.clist h3 span{display: inline-block;width:158px;}
+.clist h3 span i{width: 42px;height: 20px;color: #fff;text-align: center;font-weight: normal;background:#ff3131;padding: 0;font-size: 14px;line-height: 20px;margin-left: 5px;}
+
+.clist p{font-size: 14px;padding: 15px 0;line-height: 28px;color: #777676}
+.clist .want{width: 195px;height: 41px;border: 1px solid #ffc68a;text-align: center;line-height: 41px;color: #fd890d;display:inline-block;font-weight: bold;}
+.clist .want:hover{color: #fff;background: #fd890d;border-color: #fd890d}
+/*右侧订单显示*/
+.rordertt{width:278px;height: 44px;background: #ffc713;line-height: 44px;text-indent:10px;color: #3c3c3c;font-weight: bold;}
+.rordertt .delete{width: 18px;height: 21px;display: block;float: right;background:url(../img/restaurant.png) 0 -230px;margin:12px 10px 0 0;}
+.rordertt .delete:hover{background-position:-19px -230px;cursor: pointer;}
+.rordersubmit{width:278px;height: 74px;background:#fd890d;text-align: center;line-height: 74px;font-size: 22px;font-weight: bold;display: block;color: #fff}
+a.rordersubmit:hover{background: #f75e0d;color: #fff;}
+.roderdbox{margin:10px;font-size: 14px;}
+.roderdbox .radselect{width: 5px;height: 5px;border: 3px solid #c6c6c6}
+.roderdbox .active{border-color:#f65959;}
+.roderdbox .timeselect{width: 256px;height: 34px;margin:10px auto;background:url(../img/rarrow.png) right 0 no-repeat #dadada;position: relative;}
+.roderdbox .timeselect .show{width:256px;height: 200px;background: #fff;padding: 5px 0;position:absolute;left: 0;top:34px;line-height:2;display: none;overflow-y:auto }
+.roderdbox .timeselect .show li{text-indent: 10px;}
+.roderdbox .timeselect .show li:hover{background: #eaeaea}
+.roderdbox .timeselect .textshow{line-height: 34px;padding-left:13px;}
+.roderdbox .timeselect:hover{background-position: right -34px;}
+.roderdbox .timeselect:hover .show{display:block;}
+.roderdbox p{line-height: 30px;margin-top: 15px;}
+.red{color: #fb3232}
+.slist li{height: 44px;line-height: 44px;border-bottom: 1px solid #e1e1e1;}
+.slist li span,.slist li a{display: inline-block;vertical-align: middle;}
+.slist li .cname{width:124px;overflow: hidden;}
+.slist li .num{display: inline-block;}
+.slist li .jian{display: inline-block;width: 16px;height: 16px;background:url(../img/restaurant.png) 0 -182px;}
+.slist li .jia{display: inline-block;width: 16px;height: 16px;background:url(../img/restaurant.png) -42px -182px;}
+
+
+.last{margin-right: 0!important;}
+h1{font-weight: normal;}
+
+/*感谢*/
+.thanksleft{width:356px;line-height: 30px;}
+.thanksleft p{margin-bottom: 15px}
+.thanksleft h1{font-weight: normal;font-size: 40px;}
+.thanksleft .tel{font-size: 24px; color: #fb3232;padding-bottom: 15px;}
+.thanksad{width:528px;height: 389px;}
+/*忘记密码*/
+.forget{width: 535px;margin: 0 auto}
+.forget h1{font-size: 26px;text-align: center;margin: 66px 0 30px;}
+.forget input{width: 536px;height: 52px;background: #f0f0f0;font-size: 16px;text-indent:15px;color: #4e4e4e}
+.forget .contain{display: block; width: 222px;height: 58px;border-radius: 3px;background: #ffc713;color: #505050;text-align: center;line-height: 58px;margin:32px auto 0} 
+.forget .contain:hover{background: #fe8a0d; color: #fff}
+/*历史订单*/
+.history{overflow: visible;}
+.history h1{font-size: 20px;margin-bottom:20px;}
+.history i{font-style: normal;display: inline-block;padding: 0 15px;color: #dadada}
+.history .box{border-left:2px solid #f7f7f7;padding-left: 36px;position: relative;padding-bottom: 30px;}
+.history .box .circle{width:12px;height: 12px;display:block;position: absolute;background: #b4b4b4;border-radius: 50%;top:6px;left: -8px;}
+.history .box .hisransd{border-bottom: 1px solid #f7f7f7;padding-bottom: 18px;}
+.history .box .hisransd img{width:101px;height: 101px;margin: 18px 18px 0 0}
+.history .box .hisransd h3{font-weight: normal;padding:16px 0 5px;}
+.history .box .hisransd p{font-size: 14px;line-height: 26px;}
+.history .box table{width:587px;font-size: 14px;}
+.history .box table td{height: 30px;color:#525252}
+
+/*订单管理*/
+.ordermtitle{border-bottom: 1px solid #efefef;margin-bottom: 35px;}
+.ordermtitle a{display:inline-block;padding: 0 40px;height: 43px;border-bottom: 1px solid #efefef;position: relative;top:1px;border-top:4px solid #fff;text-align: center;line-height: 43px;}
+.ordermtitle a.cur{border-top:4px solid #f75e0e;border-bottom: 1px solid #fff;border-left:1px solid #efefef;border-right:1px solid #efefef;}
+.orderm{width: 296px;border: 1px solid #efefef;height: 540px;position: relative;font-size: 14px;float: left;margin:0 43px 46px 0;}
+.orderm .ordertt{width:296px;height: 44px;background: #efefef;line-height: 44px;text-indent:10px;color: #3c3c3c;font-weight: bold;}
+.orderm .ordertt .handle{font-size: 14px;padding-right:10px;font-weight: normal;}
+.orderm .roderdbox{height: 244px;overflow:auto;}
+.orderm .list ul{border-bottom: 1px dotted #e1e1e1;}
+.orderm .list li{line-height:28px;margin:5px 0}
+.orderm .list li span,.slist li a{display: inline-block;vertical-align: middle;}
+.orderm .list li .cname{width:124px;overflow: hidden;}
+.orderm .list li .num{display: inline-block;}
+.orderm .blod{font-weight: bold;}
+.orderm .roderdbox2{height:100px;margin:10px;font-size: 14px;}
+.orderm .roderdbox2 p{border-top: 1px solid #efefef;padding: 20px 0 20px;margin-top: 10px;}
+.orderm .option{height: 126px;background: #efefef;overflow: hidden;text-align: center;}
+.orderm .option div{display: inline-block;margin:20px 30px 18px;}
+.orderm .option span{width: 4px;height:4px;}
+.orderm .option button{width: 108px;height: 41px;border:none;border-radius: 3px;background: #fe8a0d;color: #fff;margin: 0 14px;}
+.orderm .option button:hover{background: #f75e0d}
+.orderm:nth-child(3n){margin-right: 0!important}
+
+
+/*后台管理-依赖订单样式*/
+#sc{background: url(../img/search.png) 152px 0 no-repeat #4d4d4d;width: 179px;height: 34px;padding-right: 5px;display: inline-block;border-radius: 17px;}
+#sc input.first{color: #fff;width:150px;height: 34px;border-radius: 17px;text-indent: 15px;background: #4d4d4d}
+#sm{width: 19px;height: 34px;background:none;border:none;display: inline-block; vertical-align: middle;border-radius: 5px;top:-1px;}
+#sl{font-size: 14px;height: 32px; }
+.orderm2 input{font-size: 14px;}
+.orderm2 address{font-style: normal;margin: 14px 10px 5px;line-height: 1.6}
+.orderm2 .lineh{line-height:14px;height: 85px;margin-bottom: 0}
+.orderm2 .lineh input{width:34px;border: 1px solid #cbcbcb;color: #525252}
+.orderm2 .lineh p{padding: 10px 0;}
+.orderm2 .lineh span{margin: 10px 0}
+.orderm2 .lineh .fl{display: block;width:136px;height: 14px;border-right: 1px solid #cbcbcb}
+#deliveryman{width:269px;height: 35px;background: #4d4d4d;color: #fff;border: none;margin-left: 10px;text-indent: 15px;margin-bottom: 5px;}
+.h210{height: 210px!important;}
+/*未付款*/
+input.pinfo{width: 400px;height: 40px;background: #f0f0f0;border-radius: 3px;margin-bottom: 5px;font-size: 16px;text-indent: 15px;color: #3b3b3b}
+input.xinyka{width:285px;height: 40px;background: #f0f0f0;border-radius: 3px;margin-bottom: 5px;font-size: 16px;text-indent: 15px;color: #3b3b3b}
+.payselect{background: #f0f0f0;margin: 5px 0 10px;width: 131px;height: 40px;border:1px;}
+.paysubmit{border:none;width: 148px;height: 50px;border-radius: 3px;font-size: 20px;background: #ffc713;margin: 20px 0 0 120px;outline: 0}
+.paysubmit:hover{background: #fe8a0d;color: #fff}
+
+.padderssslide{width: 650px;background: #f6f6f6;color: #666666;border-bottom-left-radius: 3px;border-bottom-right-radius: 3px;padding: 15px 0;display: none}
+.padderssslide li{line-height:34px;text-indent: 30px;}
+.padderssslide li:hover{background: #e3e3e3}
+.f24{font-size: 24px!important;}
+.paysubmit2{border:none;width:228px;height: 50px;border-radius: 3px;font-size: 20px;background: #ffc713;margin: 20px 0 0 0;outline: 0;}
+.paysubmit2:hover{background: #fe8a0d;color: #fff}
+small.tip{vertical-align:-12px;font-size: 16px;}
+
+.mycase{background:#f7f7f7;padding:0 10px 10px;}
+.mycase .hisransd{border-bottom: 1px solid #f7f7f7;padding-bottom:10px;}
+.mycase .hisransd img{width: 78px;height: 78px;margin: 18px 18px 0 0}
+.mycase .hisransd h3{padding:16px 0 7px;font-size: 16px;}
+.mycase .hisransd p{font-size: 14px;line-height: 26px;width:254px;}
+.mycase table{width:246px;font-size: 14px;}
+.mycase table td{height: 30px;color:#525252}
+
+.addresslist{margin-bottom: 10px;}
+.okbtn{width: 107px;}
+/* page */
+.page_more { width:100%; margin-top:40px; margin-bottom:20px; overflow:hidden; }
+.pageZone{padding-top:0px; overflow:hidden;text-align:center}
+.pageZone span {width:38px;height:38px;line-height:38px;text-align:center;color:#474747; text-decoration:none;margin-right:5px;font-size:16px;cursor:pointer;display:inline-block;background:#f6f6f6}
+.pageZone span a {color:#414141; text-decoration:none;}
+.pageZone span:hover{ background:#ffc713; text-decoration:none}
+.pageZone .Disabled{width:85px;}
+.pageZone span.Disabled:hover{background:#f6f6f6;}
+.pageZone .Disabled a{display:inline-block;width:85px;color:#aeaeae}
+.pageZone .Disabled a:hover{color:#aeaeae}
+.pageZone .next{width:85px;}
+.pageZone .next a{display:inline-block;width:85px;}
+.pageZone span.isNow{background:#ffc713;}
+.pageZone span.dot{border:none;}
+.pageZone span a{display:inline-block;width:38px;height:38px;}
+.pageZone span a:hover{text-decoration:none}
+
+/*top*/
+.top{display:block;width:92px;height: 92px;background: url(../img/top.png) rgba(0,0,0,0.6);position: fixed;left: 50%;bottom: 10px;margin-left:510px;}
+.top:hover{background-color: #ffc713}
+
+/*------------*/
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers:
+ * http://juicystudio.com/article/screen-readers-display-none.php
+ */
+.fixed{position:fixed;top:0;}
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
+.addrinfo{
+	background: url(/img/p.png) left no-repeat;
+  	background-size: 7px;
+  	padding-left: 10px;
+  	margin-left: 10px;
+  	font-size: 12px;
+}
+.myPager{padding-top:0px; overflow:hidden;text-align:center}
+.myPager li {width:38px;height:38px;line-height:38px;text-align:center;color:#474747; text-decoration:none;margin-right:5px;font-size:16px;cursor:pointer;display:inline-block;background:#f6f6f6}
+.myPager li a {color:#414141; text-decoration:none;}
+.myPager li:hover{ background:#ffc713; text-decoration:none}
+.myPager .Disabled{width:85px;}
+.myPager li.Disabled:hover{background:#f6f6f6;}
+.myPager .Disabled a{display:inline-block;width:85px;color:#aeaeae}
+.myPager .Disabled a:hover{color:#aeaeae}
+.myPager .next{width:85px;}
+.myPager .next a{display:inline-block;width:85px;}
+.myPager .first{width:60px;}
+.myPager .first a{display:inline-block;width:60px;}
+.myPager li.isNow{background:#ffc713;}
+.myPager li.dot{border:none;}
+.myPager li a{display:inline-block;width:38px;height:38px;}
+.myPager li a:hover{text-decoration:none}
+
+.link {cursor: pointer;}
